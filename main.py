@@ -45,7 +45,7 @@ def read_item(app_id: int, token: str):
     for x in authorizations:
         if x['app_id'] == app_id and x['token'] == token:
             arl = get_arl(deezer)
-            if arl is not None:
+            if arl is str:
                 send_telegram_notification(x)
                 return {
                     'arl': arl,
@@ -53,7 +53,7 @@ def read_item(app_id: int, token: str):
                 }
             else:
                 print('something happened')
-                return {'error': 'something happened'}
+                return {'error': 'something happened', 'cookies': arl}
 
         return {'arl': None, 'for': x['name']}
 

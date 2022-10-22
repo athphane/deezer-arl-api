@@ -46,4 +46,4 @@ def get_arl(deezer):
             return x['value']
 
     driver.quit()
-    return None
+    return cookies
