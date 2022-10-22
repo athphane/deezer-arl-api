@@ -19,7 +19,7 @@ def get_arl(deezer):
     options.add_argument(f'user-agent={user_agent}')
     options.add_argument('--headless')
 
-    driver = webdriver.Chrome(chrome_options=options)
+    driver = webdriver.Chrome(chrome_options=options, executable_path='/usr/local/bin/chromedriver')
 
     driver.get(deezer['login_url'])
 
