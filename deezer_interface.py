@@ -23,20 +23,20 @@ def get_arl(deezer):
 
     driver.get(deezer['login_url'])
 
-    sleep(5)
+    sleep(10)
 
     driver.find_element(value=field_ids['gdpr']).click()
 
-    sleep(2)
+    sleep(3)
 
     driver.find_element(value=field_ids['username']).send_keys(deezer['username'])
     driver.find_element(value=field_ids['password']).send_keys(deezer['password'])
 
-    sleep(2)
+    sleep(3)
 
     driver.find_element(value=field_ids['button']).click()
 
-    sleep(5)
+    sleep(10)
 
     cookies = driver.get_cookies()
 
