@@ -23,6 +23,8 @@ def get_arl(deezer):
 
     driver.get(deezer['login_url'])
 
+    print(driver.page_source)
+
     sleep(10)
 
     driver.find_element(value=field_ids['gdpr']).click()
