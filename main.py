@@ -51,6 +51,9 @@ def read_item(app_id: int, token: str):
                     'arl': arl,
                     'for': x['name']
                 }
+            else:
+                print('something happened')
+                return {'error': 'something happened'}
 
         return {'arl': None, 'for': x['name']}
 
