@@ -17,15 +17,15 @@ def get_arl(deezer):
     ua = UserAgent()
     user_agent = ua.random
     options.add_argument(f'user-agent={user_agent}')
-    # options.add_argument('--headless')
+    options.add_argument('--headless')
 
     driver = webdriver.Chrome(chrome_options=options)
 
     driver.get(deezer['login_url'])
 
-    sleep(5)
+    # sleep(5)
 
-    driver.find_element(value=field_ids['gdpr']).click()
+    # driver.find_element(value=field_ids['gdpr']).click()
 
     sleep(2)
 
